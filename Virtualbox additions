@@ -1,0 +1,43 @@
+#THE VBOX ADDITIONS COMES WITH YOUR VIRTUALBOX ORACLE FILE. THE ISO IS IN PROGRAM FILES/ORACLE
+1. Install VirtualBox Guest Additions
+Start your Ubuntu VM in VirtualBox.
+
+Update your system packages:
+
+bash
+Copy code
+sudo apt update
+sudo apt upgrade -y
+Install necessary packages for building kernel modules:
+
+bash
+Copy code
+sudo apt install -y build-essential dkms linux-headers-$(uname -r)
+Insert the Guest Additions CD image:
+
+In the VirtualBox menu, go to Devices > Insert Guest Additions CD image...
+
+Mount the CD image and run the installer:
+
+bash
+Copy code
+sudo mkdir /mnt/cdrom
+sudo mount /dev/cdrom /mnt/cdrom
+sudo /mnt/cdrom/VBoxLinuxAdditions.run
+Reboot your VM:
+
+bash
+Copy code
+sudo reboot
+2. Enable Bidirectional Clipboard
+Open the VirtualBox Manager.
+
+Select your Ubuntu VM and go to Settings.
+
+Navigate to the General section and then to the Advanced tab.
+
+Set Shared Clipboard to Bidirectional.
+
+Set Drag and Drop to Bidirectional (optional).
+
+Click OK to save the settings.

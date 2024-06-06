@@ -1,0 +1,19 @@
+#For integrating DFIR-IRIS, Wazuh, and OpenCTI, the most compatible and preferred operating system is Ubuntu.
+
+#Recommended OS: Ununtu Server 22.04 https://cdimage.ubuntu.com/ubuntu-server/jammy/daily-live/current/jammy-live-server-amd64.iso
+#Im running this on virtualbox
+#Install Dependencies: Ensure you have all necessary dependencies like Docker, Docker Compose, and other required packages.
+  #Get up and running, with a GUI
+sudo apt update
+sudo apt upgrade -y
+sudo apt install tasksel -y
+sudo tasksel install xubuntu-desktop
+sudo apt install lightdm -y
+sudo apt install xfce4-goodies -y
+$select gdm3 when installing
+#Enable GUI to start outmatically
+sudo systemctl set-default graphical.target
+sudo reboot
+#Installing guestadditions will make the next steps easier
+
+  #Installing software 

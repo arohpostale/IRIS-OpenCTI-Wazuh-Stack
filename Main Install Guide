@@ -16,4 +16,9 @@ sudo systemctl set-default graphical.target
 sudo reboot
 #Installing guestadditions will make the next steps easier
 
-  #Installing software 
+  #Installing software
+#make directory for script
+sudo mkdir scripts
+cd /scripts
+vim install_scripts.sh
+#copy paste "install script" into setup_scripts.sh
